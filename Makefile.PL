@@ -8,7 +8,7 @@ WriteMakefile(
     AUTHOR           => q{Mikhail Che <mche@cpan.org>},
     VERSION_FROM     => 'lib/Mojo/Base/Lib.pm',
     ABSTRACT_FROM    => 'lib/Mojo/Base/Lib.pm',
-    LICENSE          => 'artistic_2',
+    LICENSE          => 'Perl',
     PL_FILES         => {},
     MIN_PERL_VERSION => 5.006,
     CONFIGURE_REQUIRES => {
@@ -18,9 +18,9 @@ WriteMakefile(
         'Test::More' => 0,
     },
     PREREQ_PM => {
-        #'ABC'              => 1.6,
+        'Mojolicious'              => 6,
         #'Foo::Bar::Module' => 5.0401,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean => { FILES => 'Mojo-Base-Lib-*' },
+    ##clean => { FILES => 'Mojo-Base-Lib-*' },
 );
