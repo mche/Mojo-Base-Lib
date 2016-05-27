@@ -1,7 +1,19 @@
 package Mojo::Base::Lib;
 use base 'Mojo::Base';
 
-our $VERSION = '0.002';
+our $VERSION = '0.003';
+
+# Supported on Perl 5.22+
+my $NAME
+  = eval { require Sub::Util; Sub::Util->can('set_subname') } || sub { $_[1] };
+
+# Declared here to avoid circular require problems in Mojo::Util
+sub _monkey_patch {
+  my ($class, %patch) = @_;
+  no strict 'refs';
+  no warnings 'redefine';
+  *{"${class}::$_"} = $NAME->("${class}::$_", $patch{$_}) for keys %patch;
+}
 
 sub import {
   my $class = shift;
@@ -104,7 +116,7 @@ sub import {
 
 =head1 VERSION
 
-0.002
+0.003
 
 =head1 NAME
 

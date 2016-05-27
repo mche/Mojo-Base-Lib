@@ -2,7 +2,6 @@
 # find ~/perl5/lib/ -type f -exec grep -Hni 'is not a controller' {} \;
 
 package TestApp;
-use strict;
 
 use FindBin;
 use lib "$FindBin::Bin/lib";
