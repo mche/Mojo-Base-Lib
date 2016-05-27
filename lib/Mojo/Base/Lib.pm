@@ -110,7 +110,9 @@ Mojo::Base::Lib - use Mojo::Base::Lib 'SomeBaseClass',-lib, qw(rel/path/lib /abs
 
 =head1 SYNOPSIS
 
-Also there is a fourth extended form for add extra lib directories to perl's search path. See <lib>
+Based on L<Mojo::Base> where you found three forms usage.
+
+This module provide a fourth extended form for add extra lib directories to perl's search path. See <lib>
 
   use Mojo::Base -lib, qw(rel/path/lib /abs/path/lib);
   use Mojo::Base -lib, ['lib1', 'lib2'];
@@ -122,6 +124,8 @@ Also there is a fourth extended form for add extra lib directories to perl's sea
 
 For relative lib path will use L<FindBin> module and C<$FindBin::Bin> is prepends to that lib.
 Libs always applied first even its last on flags list.
+
+All three L<Mojo::Base> forms works also.
 
 =head1 SEE ALSO
 
