@@ -133,7 +133,7 @@ L<Mojo::Base>
 
 =head1 BUGS / CONTRIBUTING
 
-Please report any bugs or feature requests at L<https://github.com/mche/Mojolicious-Plugin-RoutesAuthDBI/issues>. Pull requests also welcome.
+Please report any bugs or feature requests at L<https://github.com/mche/Mojo-Base-Lib/issues>.
 
 =head1 COPYRIGHT
 
