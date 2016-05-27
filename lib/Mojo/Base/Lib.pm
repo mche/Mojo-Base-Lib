@@ -6,6 +6,8 @@ use base 'Mojo::Base';
 #~ use utf8;
 #~ use feature ();
 
+$a=1;
+
 our $VERSION = '0.001';
 
 sub import {
@@ -90,6 +92,7 @@ sub import {
   # Mojo modules are strict!
   $_->import for qw(strict warnings utf8);
   feature->import(':5.10');
+warn $flag, 'final strict!';
 }
 
 1;
