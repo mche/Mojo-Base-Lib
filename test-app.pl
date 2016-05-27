@@ -7,14 +7,12 @@ use strict;
 use FindBin;
 use lib "$FindBin::Bin/lib";
 
-use Mojo::Base 'Mojolicious';
-
-$a=1;
+use Mojo::Base 'Mojolicious::Che';
 
 sub startup {# 
   my $app = shift;
-  #~ $app->plugin(Config =>{file => 'Config.pm'});
-  #~ $app->поехали();
+  $app->plugin(Config =>{file => 'Config.pm'});
+  $app->поехали();
 }
 
 __PACKAGE__->new()->start();

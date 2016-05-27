@@ -14,7 +14,7 @@
   mojo_session => {cookie_name => 'ELK'},
   mojo_secrets => ['true 123 test-app',],
   namespaces => [],
-  routes => [
+  'маршруты' => [
   [
     route=>'/callback',
     to=>sub {shift->render(format=>'txt', text=>'You have access!')},
