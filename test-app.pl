@@ -3,10 +3,10 @@
 
 package TestApp;
 
-use FindBin;
-use lib "$FindBin::Bin/lib";
+#~ use FindBin;
+#~ use lib "$FindBin::Bin/lib";
 
-use Mojo::Base::Lib 'Mojolicious::Che', -lib, qw(lib);
+use Mojo::Base 'Mojolicious::Che';
 
 sub startup {# 
   my $app = shift;

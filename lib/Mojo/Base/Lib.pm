@@ -1,7 +1,7 @@
 package Mojo::Base::Lib;
 use base 'Mojo::Base';
 
-our $VERSION = '0.003';
+our $VERSION = '0.004';
 
 # Supported on Perl 5.22+
 my $NAME
@@ -116,7 +116,7 @@ sub import {
 
 =head1 VERSION
 
-0.003
+0.004
 
 =head1 NAME
 
@@ -128,13 +128,12 @@ Based on L<Mojo::Base> where you found three forms usage.
 
 This module provide a fourth extended form for add extra lib directories to perl's search path. See <lib>
 
-  use Mojo::Base -lib, qw(rel/path/lib /abs/path/lib);
-  use Mojo::Base -lib, ['lib1', 'lib2'];
-  use Mojo::Base '-lib:lib1:lib2;lib3';
-  use Mojo::Base -strict, qw(-lib lib1 lib2);
-  use Mojo::Base qw(-base -lib lib1 lib2);
-  use Mojo::Base 'SomeBaseClass', qw(-lib lib1 lib2);
-  use Mojo::Base qw(-lib lib1 lib2), 'SomeBaseClass'; # same above, different order allow
+  use Mojo::Base::Lib -lib, qw(rel/path/lib /abs/path/lib);
+  use Mojo::Base::Lib -lib, ['lib1', 'lib2'];
+  use Mojo::Base::Lib '-lib:lib1:lib2;lib3';
+  use Mojo::Base::Lib -strict, qw(-lib lib1 lib2);
+  use Mojo::Base::Lib qw(-base -lib lib1 lib2);
+  use Mojo::Base::Lib 'SomeBaseClass', qw(-lib lib1 lib2);
 
 For relative lib path will use L<FindBin> module and C<$FindBin::Bin> is prepends to that lib.
 Libs always applied first even its last on flags list.
