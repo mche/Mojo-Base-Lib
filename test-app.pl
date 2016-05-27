@@ -7,7 +7,7 @@ use strict;
 use FindBin;
 use lib "$FindBin::Bin/lib";
 
-use Mojo::Base::Lib 'Mojolicious::Che';
+use Mojo::Base::Lib 'Mojolicious::Che', -lib, qw(lib);
 
 sub startup {# 
   my $app = shift;

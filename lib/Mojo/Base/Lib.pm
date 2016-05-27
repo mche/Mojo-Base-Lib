@@ -1,7 +1,7 @@
 package Mojo::Base::Lib;
 use base 'Mojo::Base';
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 sub import {
   my $class = shift;
@@ -78,6 +78,8 @@ sub import {
   if ($flag) {
     my $caller = caller;
     no strict 'refs';
+    # Useless use of a constant ("has") in void context Useless use of reference constructor in void context
+    no warnings; 
     push @{"${caller}::ISA"}, $flag;
     _monkey_patch $caller, 'has', sub { attr($caller, @_) };
   }
@@ -102,7 +104,7 @@ sub import {
 
 =head1 VERSION
 
-0.001
+0.002
 
 =head1 NAME
 
