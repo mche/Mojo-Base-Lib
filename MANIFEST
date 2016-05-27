@@ -7,3 +7,9 @@ t/00-load.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t
+t/lib2/Test2.pm
+t/lib1/Test1.pm
+t/base-lib3.t
+t/base-lib2.t
+t/base-lib1.t
+

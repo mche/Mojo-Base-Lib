@@ -1,4 +1,4 @@
-use Mojo::Base -strict;
+use Mojo::Base::Lib -strict;
 use Test::More;
 
 use FindBin;

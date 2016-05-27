@@ -1,21 +1,17 @@
-use Mojo::Base -strict;
+use Mojo::Base::Lib -strict;
 use Test::More;
 
 #~ use FindBin;
 #~ use lib "$FindBin::Bin/lib";
 
-package Mojo::BaseTestTest;
-use Mojo::Base 'Mojo::BaseTest::Base3', -lib => 'lib';
+package Test;
+use Mojo::Base::Lib 'Test2', -lib => 'lib2';
 
 package main;
 
-my $object2 = Mojo::BaseTestTest->new;
+my $object2 = Test->new;
 
-isa_ok($object2, 'Mojo::BaseTestTest', 'class ok');
-isa_ok($object2, 'Mojo::BaseTest::Base3', 'class ok');
-isa_ok($object2, 'Mojo::BaseTest::Base1', 'class ok');
-isa_ok($object2, 'Mojo::Base', 'class ok');
-
-
+isa_ok($object2, 'Test', 'class ok');
+isa_ok($object2, 'Test2', 'class ok');
 
 done_testing();

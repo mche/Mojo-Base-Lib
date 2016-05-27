@@ -1,13 +1,6 @@
 package Mojo::Base::Lib;
 use base 'Mojo::Base';
 
-#~ use strict;
-#~ use warnings;
-#~ use utf8;
-#~ use feature ();
-
-$a=1;
-
 our $VERSION = '0.001';
 
 sub import {
@@ -92,7 +85,7 @@ sub import {
   # Mojo modules are strict!
   $_->import for qw(strict warnings utf8);
   feature->import(':5.10');
-warn $flag, 'final strict!';
+  
 }
 
 1;
@@ -113,7 +106,7 @@ warn $flag, 'final strict!';
 
 =head1 NAME
 
-Mojo::Base::Lib - use Mojo::Base::Lib -lib, qw(rel/path/lib /abs/path/lib);
+Mojo::Base::Lib - use Mojo::Base::Lib 'SomeBaseClass',-lib, qw(rel/path/lib /abs/path/lib);
 
 =head1 SYNOPSIS
 
