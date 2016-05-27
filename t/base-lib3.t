@@ -5,7 +5,7 @@ use Test::More;
 #~ use lib "$FindBin::Bin/lib";
 
 package Test;
-use Mojo::Base::Lib -lib => 'lib2', 'Test2';
+use Mojo::Base::Lib 'Test2', -lib => 'lib2';
 
 package main;
 
